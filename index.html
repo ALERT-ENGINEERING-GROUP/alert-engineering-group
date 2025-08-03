@@ -1,71 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALERN General Engineering Group</title>
+    <title>ALERT General Engineering Group</title>
+    <!-- Tailwind CSS CDN for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Font "Inter" for clean typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-        header { background: #2d2d2d; color: white; padding: 20px; text-align: center; }
-        nav { background: #444; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        .hero { text-align: center; padding: 50px; background: url('https://images.unsplash.com/photo-1581093458860-7f7a978a47c2') no-repeat center center/cover; color: blue; }
-        .section { padding: 40px; max-width: 1000px; margin: auto; }
-        .section h2 { text-align: center; margin-bottom: 20px; }
-        .services ul { list-style: none; padding: 0; }
-        .services li { background: #ddd; margin: 10px 0; padding: 10px; border-radius: 8px; }
-        .contact { text-align: center; }
-        .footer { background: #2d2d2d; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Thematic background with wires, computers, and people */
+            background-image: url('https://images.unsplash.com/photo-1517032205561-197e42d76378?q=80&w=2670&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        /* Style for the overlay to make text readable */
+        .content-overlay {
+            background-color: rgba(17, 24, 39, 0.95); /* A slightly darker overlay */
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/2A3B4C/FFF?text=Engineering+Excellence');
+        }
+        .portfolio-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
     </style>
 </head>
-<body>
+<body class="bg-gray-900 text-gray-300">
 
-<header>
-    <h1>ALERT GENERAL ENGINEERING GROUP</h1>
-</header>
+    <!-- Header and Navigation -->
+    <header class="bg-gray-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Differentiated Main Heading (h1) -->
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-cyan-400">
+                ALERT Engineering Group
+            </h1>
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="#about" class="hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#services" class="hover:text-cyan-400 transition-colors duration-300">Services</a>
+                <a href="#expertise" class="hover:text-cyan-400 transition-colors duration-300">Our Expertise</a>
+                <a href="#portfolio" class="hover:text-cyan-400 transition-colors duration-300">Portfolio</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <!-- Hero Section -->
+    <section class="relative hero-bg text-white text-center py-20 md:py-32 overflow-hidden">
+        <!-- Background image and overlay -->
+        <div class="absolute inset-0 bg-gray-900 opacity-70"></div>
+        <div class="relative z-10 container mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white animate-fade-in">
+                Design • Simulate • Review • Counsel
+            </h2>
+            <p class="text-lg md:text-2xl mb-8 font-light">
+                Delivering Electro-mechanical Project Excellence
+            </p>
+            <a href="#contact" class="bg-cyan-600 text-white font-semibold py-3 px-8 rounded-full text-lg hover:bg-cyan-700 transition-colors duration-300 shadow-xl transform hover:scale-105">
+                Get a Quote
+            </a>
+        </div>
+    </section>
 
-<section class="hero">
-    <h2>Design • Simulate • Review • Counsel</h2>
-    <p>Electro-mechanical Project Excellence</p>
-</section>
+    <!-- Content sections with a semi-transparent background -->
+    <main class="content-overlay">
+        <!-- About Us Section -->
+        <section id="about" class="py-16 md:py-24 bg-gray-900 bg-opacity-70">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <!-- Differentiated Section Heading (h2) -->
+                <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">About Us</h2>
+                <div class="md:flex md:space-x-12 items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <!-- Placeholder image for the About section -->
+                        <img src="https://placehold.co/800x600/1E3A8A/BFDBFE?text=Our+Team" alt="ALERT team working" class="rounded-xl shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="text-lg leading-relaxed text-gray-300">
+                            ALERT General Engineering Group is an extensive network of highly-skilled engineers and accomplished university lecturers. We have brought together top minds from diverse academic backgrounds to form a collaborative community dedicated to technical excellence. Our mission is to combine this collective expertise with creative problem-solving to deliver robust, efficient, and innovative electro-mechanical solutions for our clients. We believe that true engineering excellence comes from a rich tapestry of knowledge and shared passion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="section" id="about">
-    <h2>About Us</h2>
-    <p>ALERT GENERAL ENGINEERING GROUP is dedicated to designing, simulating, reviewing, and providing expert counseling for electro-mechanical projects. We combine technical precision with creative problem-solving to deliver high-quality engineering solutions.</p>
-</section>
+        <!-- Our Expertise Section -->
+        <section id="expertise" class="py-16 md:py-24 bg-gray-800 bg-opacity-70">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <!-- Differentiated Section Heading (h2) -->
+                <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">Our Expertise</h2>
+                <div class="text-center text-lg text-gray-400">
+                    <p class="mb-4">
+                        Our team's strength lies in our collective, diverse skill set. With backgrounds from multiple prestigious institutions, we bring a wide range of perspectives to every challenge. Our members, including seasoned lecturers, are recognized for their technical proficiency and commitment to delivering the highest quality work. This collaborative environment ensures that every project benefits from a comprehensive, multi-faceted approach, resulting in solutions that are both theoretically sound and practically effective.
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mt-8">
+                        <div class="text-center">
+                            <!-- Smaller subheading (h3) -->
+                            <i class="fas fa-handshake text-5xl text-cyan-500 mb-2"></i>
+                            <h3 class="text-2xl font-bold text-white">Collaborative Network</h3>
+                            <p>Bringing together experts from diverse engineering disciplines.</p>
+                        </div>
+                        <div class="text-center">
+                            <!-- Smaller subheading (h3) -->
+                            <i class="fas fa-brain text-5xl text-cyan-500 mb-2"></i>
+                            <h3 class="text-2xl font-bold text-white">Advanced Knowledge</h3>
+                            <p>Leveraging the latest academic and industry practices.</p>
+                        </div>
+                        <div class="text-center">
+                            <!-- Smaller subheading (h3) -->
+                            <i class="fas fa-tools text-5xl text-cyan-500 mb-2"></i>
+                            <h3 class="text-2xl font-bold text-white">Proven Results</h3>
+                            <p>Delivering high-quality, innovative engineering projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="section services" id="services">
-    <h2>Our Services</h2>
-    <ul>
-        <li>Electrical Project Design & Simulation</li>
-        <li>Mechanical Project Design & Simulation</li>
-        <li>CAD and SOLID WORK Drafting & Detailing</li>
-        <li>Technical Project Review & Consultation</li>
-    </ul>
-</section>
+        <!-- Our Services Section -->
+        <section id="services" class="py-16 md:py-24 bg-gray-900 bg-opacity-70">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <!-- Differentiated Section Heading (h2) -->
+                <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">Our Services</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 with detailed description -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-bolt text-4xl text-cyan-500 mb-4"></i>
+                        <!-- Smaller subheading (h3) -->
+                        <h3 class="text-xl font-bold mb-2 text-white">Electrical Project Design & Simulation</h3>
+                        <p class="text-gray-400">We provide comprehensive electrical design services, from circuit board layout to complete system architecture. Our team utilizes advanced simulation software to test and validate designs for functionality, safety, and efficiency before a single component is built, saving you time and resources.</p>
+                    </div>
 
-<section class="section" id="portfolio">
-    <h2>Our Works</h2>
-    <p>Coming Soon: A showcase of our CAD and SOLID WORK models, Proteus simulations, and engineering projects.</p>
-</section>
+                    <!-- Service Card 2 with detailed description -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-cogs text-4xl text-cyan-500 mb-4"></i>
+                        <!-- Smaller subheading (h3) -->
+                        <h3 class="text-xl font-bold mb-2 text-white">Mechanical Project Design & Simulation</h3>
+                        <p class="text-gray-400">Our mechanical engineers specialize in creating robust and reliable designs for a wide range of applications. We use advanced simulation tools to analyze stress, thermal dynamics, and motion, ensuring that your mechanical systems are optimized for performance, durability, and cost-effectiveness.</p>
+                    </div>
 
-<section class="section contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:alertengineeringgroup@gmail.com">alertengineeringgroup@gmail.com</a></p>
-    <p>Phone: +251-502-23886</p>
-</section>
+                    <!-- Service Card 3 with detailed description -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-pencil-ruler text-4xl text-cyan-500 mb-4"></i>
+                        <!-- Smaller subheading (h3) -->
+                        <h3 class="text-xl font-bold mb-2 text-white">CAD and SOLID WORK Drafting & Detailing</h3>
+                        <p class="text-gray-400">Precision and accuracy are at the heart of our drafting services. We create detailed 2D and 3D models using industry-leading software like AutoCAD and SolidWorks. Our technical drawings and specifications are meticulously crafted to ensure seamless manufacturing and assembly processes for your projects.</p>
+                    </div>
 
-<div class="footer">
-    <p>&copy; 2025 Alert General Engineering Group. All Rights Reserved.</p>
-</div>
+                    <!-- Service Card 4 with detailed description -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-lightbulb text-4xl text-cyan-500 mb-4"></i>
+                        <!-- Smaller subheading (h3) -->
+                        <h3 class="text-xl font-bold mb-2 text-white">Technical Project Review & Consultation</h3>
+                        <p class="text-gray-400">Our team offers expert consultation and peer review services for your engineering projects. We provide critical feedback on design, feasibility, and cost-efficiency, helping you identify potential issues early and guiding you toward the most successful outcome. Our goal is to be your trusted technical partner.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Interactive Portfolio Section -->
+        <section id="portfolio" class="py-16 md:py-24 bg-gray-800 bg-opacity-70">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <!-- Differentiated Section Heading (h2) -->
+                <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">Our Works</h2>
+
+                <!-- Main Project Categories -->
+                <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8">
+                    <div id="electrical-projects-card" class="portfolio-card cursor-pointer bg-gray-900 p-8 rounded-xl shadow-xl text-center transform transition-all duration-300">
+                        <i class="fas fa-microchip text-6xl text-cyan-500 mb-4"></i>
+                        <!-- Smaller subheading (h3) -->
+                        <h3 class="text-2xl font-bold text-white">Electrical Projects</h3>
+                        <p class="text-gray-400 mt-2">Design & Simulation</p>
+                    </div>
+                    <div id="mechanical-projects-card" class="portfolio-card cursor-pointer bg-gray-900 p-8 rounded-xl shadow-xl text-center transform transition-all duration-300">
+                        <i class="fas fa-drafting-compass text-6xl text-cyan-500 mb-4"></i>
+                        <!-- Smaller subheading (h3) -->
+                        <h3 class="text-2xl font-bold text-white">Mechanical Projects</h3>
+                        <p class="text-gray-400 mt-2">CAD & SolidWorks</p>
+                    </div>
+                </div>
+
+                <!-- Dynamic Project Details -->
+                <div id="project-details" class="mt-12">
+                    <!-- This area will be populated by JavaScript -->
+                    <p id="placeholder-text" class="text-center text-lg text-gray-400">
+                        Select a project category above to see our detailed works.
+                    </p>
+
+                    <!-- Electrical Projects - Hidden by default -->
+                    <div id="electrical-details" class="grid-cols-1 md:grid-cols-2 gap-8 hidden">
+                        <div class="bg-gray-900 p-8 rounded-xl shadow-xl text-center">
+                            <img src="https://placehold.co/800x600/16283A/2C688D?text=Proteus+Projects" alt="Proteus Projects" class="w-full h-auto rounded-lg mb-4">
+                            <h4 class="text-xl font-bold text-white">Proteus Projects</h4>
+                            <p class="text-gray-400 mt-2">A showcase of our circuit designs and simulations using Proteus.</p>
+                        </div>
+                        <div class="bg-gray-900 p-8 rounded-xl shadow-xl text-center">
+                            <img src="https://placehold.co/800x600/16283A/2C688D?text=PLC+Projects" alt="PLC Projects" class="w-full h-auto rounded-lg mb-4">
+                            <h4 class="text-xl font-bold text-white">PLC Projects</h4>
+                            <p class="text-gray-400 mt-2">Our expertise in Programmable Logic Controllers for automation and control.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mechanical Projects - Hidden by default -->
+                    <div id="mechanical-details" class="grid-cols-1 md:grid-cols-2 gap-8 hidden">
+                        <div class="bg-gray-900 p-8 rounded-xl shadow-xl text-center">
+                            <img src="https://placehold.co/800x600/16283A/2C688D?text=AutoCAD+Projects" alt="AutoCAD Projects" class="w-full h-auto rounded-lg mb-4">
+                            <h4 class="text-xl font-bold text-white">AutoCAD Projects</h4>
+                            <p class="text-gray-400 mt-2">Examples of our 2D and 3D drafting and design work using AutoCAD.</p>
+                        </div>
+                        <div class="bg-gray-900 p-8 rounded-xl shadow-xl text-center">
+                            <img src="https://placehold.co/800x600/16283A/2C688D?text=SolidWorks+Projects" alt="SolidWorks Projects" class="w-full h-auto rounded-lg mb-4">
+                            <h4 class="text-xl font-bold text-white">SolidWorks Projects</h4>
+                            <p class="text-gray-400 mt-2">A portfolio of our complex 3D models and assemblies created with SolidWorks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gray-900 bg-opacity-70">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <!-- Differentiated Section Heading (h2) -->
+                <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">Contact Us</h2>
+                <div class="bg-gray-800 p-10 rounded-xl shadow-lg text-center">
+                    <p class="text-lg leading-relaxed mb-6 text-gray-400">
+                        Ready to start your next project? Get in touch with us today.
+                    </p>
+                    <div class="space-y-4">
+                        <p class="text-xl text-gray-200">
+                            <i class="fas fa-envelope text-cyan-500 mr-2"></i>
+                            <a href="mailto:alertengineeringgroup@gmail.com" class="hover:underline">alertengineeringgroup@gmail.com</a>
+                        </p>
+                        <p class="text-xl text-gray-200">
+                            <i class="fas fa-phone-alt text-cyan-500 mr-2"></i>
+                            <a href="tel:+251-502-23886" class="hover:underline">+251-9502-23886</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 ALERT General Engineering Group. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the main category cards and detail sections
+        const electricalCard = document.getElementById('electrical-projects-card');
+        const mechanicalCard = document.getElementById('mechanical-projects-card');
+        const electricalDetails = document.getElementById('electrical-details');
+        const mechanicalDetails = document.getElementById('mechanical-details');
+        const placeholderText = document.getElementById('placeholder-text');
+
+        // Function to remove any active state from cards
+        function resetCards() {
+            electricalCard.classList.remove('ring-4', 'ring-cyan-500');
+            mechanicalCard.classList.remove('ring-4', 'ring-cyan-500');
+        }
+
+        // Event listener for Electrical Projects card
+        electricalCard.addEventListener('click', () => {
+            // Remove active state from all cards
+            resetCards();
+            // Add active state to the clicked card
+            electricalCard.classList.add('ring-4', 'ring-cyan-500');
+
+            // Hide other sections and show electrical projects
+            placeholderText.classList.add('hidden');
+            mechanicalDetails.classList.add('hidden');
+            electricalDetails.classList.remove('hidden');
+            electricalDetails.classList.add('grid');
+        });
+
+        // Event listener for Mechanical Projects card
+        mechanicalCard.addEventListener('click', () => {
+            // Remove active state from all cards
+            resetCards();
+            // Add active state to the clicked card
+            mechanicalCard.classList.add('ring-4', 'ring-cyan-500');
+
+            // Hide other sections and show mechanical projects
+            placeholderText.classList.add('hidden');
+            electricalDetails.classList.add('hidden');
+            mechanicalDetails.classList.remove('hidden');
+            mechanicalDetails.classList.add('grid');
+        });
+    </script>
 </body>
 </html>
-
